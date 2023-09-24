@@ -1,0 +1,151 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <string>
+#include <stdio.h>
+#include <fstream>
+#include <search.h>
+using namespace std;
+const char* my_firstfile = "C:\\Users\\lance\\Desktop\\hw_file\\temp_2\\firstfile.txt";
+const char* my_secondfile = "C:\\Users\\lance\\Desktop\\hw_file\\temp_2\\secondfile.txt";
+string consonants = "qwrtpsdfghklzxcvbnmйцкнгшщзхъфвпрлджчсмтьб";
+string vowels = "eyuioajёуеыаоэяю";
+string numbers = "1234567890";
+
+void checkFile(FILE* file) {
+	if (file) {
+		cout << "File is open\n\n";
+		while (!feof(file)) {
+			cout << (char)fgetc(file);
+		}
+		cout << endl;
+		char line[128];
+		while (!feof(file)) {
+			fgets(line, 128, file);
+			cout << line;
+		}
+		cout << endl;
+	}
+	else {
+		cout << "File not open" << endl;
+	}
+}
+
+bool search(char ch, string arr) {
+	for (size_t i = 0; i < arr.size(); i++) {
+		if (ch == arr[i]) {
+			return true;
+		}
+	}
+}
+
+int numberFile(const char* filefirst) {
+	int number = 0;
+	ifstream f;
+	f.open(filefirst, ios::in);
+	if (f.is_open()) {
+		while (!f.eof()) {
+			char ch;
+			f >> ch;
+			if (search(ch,numbers)==true) {
+				++number;
+			}
+		}
+	}
+	else {
+		cout << "File not open" << endl;
+	}
+	f.close();
+	return number;
+}
+
+int vowelFile(const char* filefirst) {
+	int vowel = 0;
+	ifstream f;
+	f.open(filefirst, ios::in);
+	if (f.is_open()) {
+		while (!f.eof()) {
+			char ch;
+			f >> ch;
+			if (search(ch, vowels) == true) {
+				++vowel;
+			}
+		}
+	}
+	else {
+		cout << "File not open" << endl;
+	}
+	f.close();
+	return vowel;
+}
+
+int consonantFile(const char* filefirst) {
+	int consonant = 0;
+	ifstream f;
+	f.open(filefirst, ios::in);
+	if (f.is_open()) {
+		while (!f.eof()) {
+			char ch;
+			f >> ch;
+			if (search(ch, consonants) == true) {
+				++consonant;
+			}
+		}
+	}
+	else {
+		cout << "File not open" << endl;
+	}
+	f.close();
+	return consonant;
+}
+
+int charactersFile(const char* filefirst) {
+	int characters = 0;
+	ifstream f;
+	f.open(filefirst, ios::in);
+	if (f.is_open()) {
+		while (!f.eof()) {
+			char ch;
+			f >> ch;
+			++characters;
+		}
+	}
+	else {
+		cout << "File not open" << endl;
+	}
+	f.close();
+	return characters;
+}
+
+int strFile(const char* filefirst) {
+	int str = 0;
+	ifstream f;
+	f.open(filefirst, ios::in);
+	if (f.is_open()) {
+		string line;
+		while (getline(f, line)) {
+			++str;
+		}
+	}
+	f.close();
+	return str;
+}
+
+int main() {
+	int characters = charactersFile(my_firstfile);
+	int str = strFile(my_firstfile);
+	int number = numberFile(my_firstfile);
+	int vowel = vowelFile(my_firstfile);
+	int consonant = consonantFile(my_firstfile);
+	FILE* fl = fopen(my_secondfile, "r");
+	cout << "You look in second file: " << endl;
+	checkFile(fl);
+
+	ofstream fs(my_secondfile);
+	fs << "Characters in the File: " << characters << endl;
+	fs << "Lines in the File: " << str << endl;
+	fs << "Vowels in the File: " << vowel << endl;
+	fs << "Consonants in the File: " << consonant << endl;
+	fs << "Numbers in the File: " << number << endl;
+	fs.close();
+	return 0;
+}

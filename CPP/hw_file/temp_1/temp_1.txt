@@ -1,0 +1,74 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <string>
+#include <stdio.h>
+#include <fstream>
+using namespace std;
+const char* my_firstfile = "C:\\Users\\lance\\Desktop\\hw_file\\temp_1\\firstfile.txt";
+const char* my_secondfile = "C:\\Users\\lance\\Desktop\\hw_file\\temp_1\\secondfile.txt";
+
+
+void checkFile(FILE* file) {
+	if (file) {
+		cout << "File is open" << endl;
+		while (!feof(file)) {
+			cout << (char)fgetc(file);
+		}
+		cout << endl;
+		char line[128];
+		while (!feof(file)) {
+			fgets(line, 128, file);
+			cout << line;
+		}
+		cout << endl;
+	}
+	else {
+		cout << "File not open" << endl;
+	}
+}
+
+
+void findEqualFile(const char* filefirst, const char* filesecond) {
+	ifstream ff;
+	string s;
+	ifstream fs;
+	string str;
+	ff.open(filefirst, ios::in);
+	fs.open(filesecond, ios::in);
+	if (ff.is_open() && fs.is_open()) {
+		while (getline(ff, s)) {
+			int k = 1;
+			int n = 1;
+			while (getline(fs, str)) {
+				cout << "line " << n << " in first file and second file in " << n << " line: ";
+				if (s == str) {
+					cout << " equal " << endl;
+				}
+				else if(s > str) {
+					cout << " a line in the first file not equal second file: " << s << endl;
+					k++;
+				}
+				else if (s < str) {
+					cout << " a line in the second file not equal first file: " << str << endl;
+					k++;
+				}
+				n++;
+			}
+			ff.close();
+			fs.close();
+		}
+	}
+	else {
+		cout << "File not open" << endl;
+	}
+}
+
+
+int main() {
+	FILE* ff = fopen(my_firstfile, "r");
+	FILE* fs = fopen(my_secondfile, "r");
+	checkFile(ff);
+	checkFile(fs);
+	findEqualFile(my_firstfile, my_secondfile);
+	return 0;
+}

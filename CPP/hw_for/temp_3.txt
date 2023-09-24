@@ -1,0 +1,20 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "rus");
+	int a, b = 0, i = 0, temp;
+	cout << "Введите число а: ";
+	cin >> a;
+	while (a > 0) {
+		temp = a % 10;
+		if ((temp != 3) && (temp != 6)) {
+			b = b + temp * pow(10, i);
+			i++;
+		}
+		a = a / 10;
+	}
+	cout << "Получилось число: " << b;
+	return 0;
+}

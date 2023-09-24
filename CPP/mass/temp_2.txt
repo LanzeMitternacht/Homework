@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	const int a = 2;
+	const int b = 8;
+	int arr[a][b];
+	int n;
+	cout << "Введите число: ";
+	cin >> n;
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < b; j++) {
+			arr[i][j] = n++;
+			cout << arr[i][j] << " ";
+		}
+	}
+}

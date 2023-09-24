@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int x, y;
+	cout << "Введите первое число диапазона: ";
+	cin >> x;                     //x = 1;
+	cout << "Введите второе число диапазона: ";
+	cin >> y;                    //y = 1000;
+	if (x > y) {
+		swap(x, y);
+	}
+	float S = 0;
+	for (int i = x; i <= y; i++) {
+		S = S + i;
+}
+	S = S / y;
+	cout << "Среднее арифметическое " << x << " и " << y << " = " << S << endl;
+	return 0;
+}

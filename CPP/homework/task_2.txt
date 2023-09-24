@@ -1,0 +1,27 @@
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int x,y;
+	cout << "Введите число x: ";
+	cin >> x;
+	cout << "Введите число y: ";
+	cin >> y;
+	if (y > 0) {
+		cout << x << " в степени " << y << " = " << pow(x, y);
+	}
+	else if (y == 0) {
+		x = 1;
+		cout << x;
+	}
+	else if (y < 0) {
+		abs(y);
+		cout << x << " в степени " << y << " = " << pow(x, y);
+	}
+	return 0;
+}
+ 

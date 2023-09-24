@@ -1,0 +1,27 @@
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+void arr_show(int* array, int* array1, int size) {
+	for (int i = 0; i != size; i++) {
+		cout << array[i] << " ";
+		array1[(size - 1) - i] = array[i];
+	}
+	cout << endl;
+	for (int i = 0; i != size; i++) {
+		cout << array1[i] << " ";
+	}
+}
+
+int main() {
+	srand(time(NULL));
+	int size = 10;
+	int* array, * array1;
+	array = new int[size];
+	array1 = new int[size];
+	for (int i = 0; i != size; i++) {
+		array[i] = rand() % 10;
+	}
+	arr_show(array, array1, size);
+	return 0;
+}

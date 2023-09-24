@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a, r;
+	cout << "Введите длинну ромба: "; // нечётное число на вход
+	cin >> a;
+        r = a / 2;
+	for (int i = 0; i <= a; i++) {
+		for (int j = 0; j <= a; j++) {
+            if (i <= r) {
+                if (j >= r - i && j <= r + i) {
+                    cout << "*";
+                }
+                else {
+                    cout << " ";
+                }
+            }
+            else {
+                if (j >= r + i - a + 1 && j <= r - i + a - 1) {
+                    cout << "*";
+                }
+                else {
+                    cout << " ";
+                }
+            }
+		}
+		cout << endl;
+	}
+	return 0;
+}

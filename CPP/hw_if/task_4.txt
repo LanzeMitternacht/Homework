@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    int fuel, mass, dis_AB, dis_BC;
+    cout << "Введите расстояние между пунктами A и B: ";
+    cin >> dis_AB;
+    cout << "Введите расстояние между пунктами B и C: ";
+    cin >> dis_BC;
+    cout << "Введите вес груза: ";
+    cin >> mass;
+    if (mass <= 0) {
+        cout << "Вы забыли груз.\n";
+        return 0;
+    }
+    const int tank = 300;
+
+    if (mass >= 1 && mass <= 500 && dis_AB <= 300 && dis_BC <= 300) {
+        fuel = tank - ((1 * dis_AB) + (1 * dis_BC));
+        if (fuel <= 0) {
+            cout << "Полёт невозможен.\n";
+            return 0;
+        }
+        cout << "Заправить " << fuel << " топлива.\n";
+        
+    }
+    else if (mass >= 501 && mass <= 1000 && dis_AB <= 300 && dis_BC <= 300) {
+        fuel = tank - ((4 * dis_AB) + (4 * dis_BC));
+        if (fuel <= 0) {
+            cout << "Полёт невозможен.\n";
+            return 0;
+        }
+        cout << "Заправить " << fuel << " топлива.\n";
+    }
+    else if (mass >= 1001 && mass <= 1500 && dis_AB <= 300 && dis_BC <= 300) {
+        fuel = tank - ((7 * dis_AB) + (7 * dis_BC));
+        if (fuel <= 0) {
+            cout << "Полёт невозможен.\n";
+            return 0;
+        }
+        cout << "Заправить " << fuel << " топлива.\n";
+    }
+    else if (mass >= 1501 && mass <= 2000 && dis_AB <= 300 && dis_BC <= 300) {
+        fuel = tank - ((9 * dis_AB) + (9 * dis_BC));
+        if (fuel <= 0) {
+            cout << "Полёт невозможен.\n";
+            return 0;
+        }
+        cout << "Заправить " << fuel << " топлива.\n";
+    }
+    else {
+        cout << "Полёт невозможен. ";
+    }    
+    return 0;
+}

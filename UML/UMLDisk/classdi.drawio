@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2023-09-10T20:06:29.355Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 YaBrowser/23.7.4.971 Yowser/2.5 Safari/537.36" etag="75ZtGj6i0yUNeY3PZPkH" version="21.7.4" type="device">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1434" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="UjpMBOgjpnMYtXLg06Hp-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="UjpMBOgjpnMYtXLg06Hp-0" target="UjpMBOgjpnMYtXLg06Hp-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UjpMBOgjpnMYtXLg06Hp-0" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Disk&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp;- id_disk : int&amp;nbsp;&lt;br&gt;+ m_nameDisk : string&lt;br&gt;- m_totalSpace: double&lt;br&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- m_freeSpace : double&lt;br&gt;- m_usedSpace : double&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ renameDisk()&lt;br&gt;+ checkFreeSpace()&lt;br&gt;+ formatDisk()&lt;br&gt;+ installData()&lt;br&gt;+ deleteData()&lt;br&gt;+ verificationData()&lt;br&gt;+ repairDisk()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="40" y="65" width="210" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="UjpMBOgjpnMYtXLg06Hp-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;File&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp;- m_nameFile : string&lt;br&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- m_sizeFile : double&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ renameFile()&lt;br&gt;+ getName()&lt;br&gt;+ getSize()&lt;br&gt;+ File(m_nameFile:string, m_sizeFile: double)&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="350" y="70" width="230" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="UjpMBOgjpnMYtXLg06Hp-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shape=flexArrow;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="UjpMBOgjpnMYtXLg06Hp-2" target="UjpMBOgjpnMYtXLg06Hp-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UjpMBOgjpnMYtXLg06Hp-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;enum DiskWriteResult&lt;/b&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;Success&lt;br&gt;NoSpace&lt;br&gt;NoSpaceThenSuccess&lt;br&gt;DiskError&lt;br&gt;SuccessButVerificationFailed&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="30" y="460" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="UjpMBOgjpnMYtXLg06Hp-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shape=flexArrow;endArrow=block;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="UjpMBOgjpnMYtXLg06Hp-3" target="UjpMBOgjpnMYtXLg06Hp-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UjpMBOgjpnMYtXLg06Hp-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;enum DiskVerificationResult&lt;/b&gt;&lt;/p&gt;&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;&amp;nbsp;Verification&lt;span style=&quot;background-color: initial;&quot;&gt;Success&lt;/span&gt;&lt;br&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;VerificationFailed&lt;br&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290" y="380" width="230" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

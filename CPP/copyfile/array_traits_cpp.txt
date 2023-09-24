@@ -1,0 +1,19 @@
+#include "array_traits.h"
+#include <iostream>
+using namespace std;
+
+void copyarr(int* arr, int size) {
+	int* temp = new int[size];
+	cout << endl << "New array:\n";
+	for (int i = 0; i < size; i++) {
+		temp[i] = 0;
+		cout << temp[i] << " ";
+	}
+	cout << "\n\n" << "New copy array:\n";
+	for (int i = 0; i < size; i++) {
+		temp[i] = arr[i];
+		cout << temp[i] << " ";
+	}
+	cout << endl;
+	delete[] temp;
+}

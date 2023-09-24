@@ -1,0 +1,50 @@
+#include <iostream>
+#include <bitset>
+#include <string>
+
+//#define DEBUG
+
+using namespace std;
+template <typename T>
+string to_bin(T v) {
+	return bitset<sizeof(T) * 8>(v).to_string();
+}
+
+uint32_t bits(uint32_t value, uint32_t mask, bool setOn) {
+	if (setOn == 0) {
+		return value & mask;
+	}
+	else {
+		return value | mask;
+	}
+}
+
+int main() {
+	setlocale(LC_ALL, "rus");
+	bool setOn;
+	int number, mask;
+
+	cout << "Установить или снять разряд числа?\n";
+	cout << "0 - Снять разряд числа\n";
+	cout << "1 - Установить разряд числа\n";
+
+	if (!(cin >> setOn)) {
+		cerr << "Ошибка выбора действий\n";
+		return 1;
+	}
+
+	cout << "Введите число: ";
+	cin >> number;
+	cout << "Введите разряд: ";
+	cin >> mask;
+
+	cout << to_bin(bits(number, mask, setOn)) << endl;
+	cout << bits(number, mask, setOn) << endl;
+
+#ifdef DEBUG
+	cout << to_bin(bits(0b00101101, 0b11010010, setOn)) << endl;
+	cout << bits(0b00101101, 0b11010010, setOn) << endl;
+#endif
+
+	return 0;
+}

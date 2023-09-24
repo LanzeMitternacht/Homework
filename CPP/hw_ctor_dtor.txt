@@ -1,0 +1,151 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+class Mouse {
+    int m_button;
+    string m_brand;
+    string m_color;
+    string m_illumination;
+public:
+    Mouse(){
+        cout << "Ctor" << endl;
+    }
+    ~Mouse() {
+        cout << "Dtor" << endl;
+    }
+
+    Mouse (const Mouse& rhs) {
+        cout << "Copy ctor" << endl;
+        m_button = rhs.m_button;
+        m_brand = rhs.m_brand;
+        m_color = rhs.m_color;
+        m_illumination = rhs.m_illumination;
+    }
+
+    Mouse& operator=(const Mouse& rhs) {
+        cout << "Copy assing" << endl;
+        if (this != &rhs) {
+            m_button = rhs.m_button;
+            m_brand = rhs.m_brand;
+            m_color = rhs.m_color;
+            m_illumination = rhs.m_illumination;
+        }
+        return *this;
+    }
+
+    void setButton(int number) {
+        m_button = number;
+    }
+    int button() const {
+        return m_button;
+    }
+
+    void setBrand(string brand) {
+        m_brand = brand;
+    }
+    string brand() const {
+        return m_brand;
+    }
+
+    void setColor(string color) {
+        m_color = color;
+    }
+    string color() const {
+        return m_color;
+    }
+
+    void print() const {
+        cout << "\nButtons: " << m_button << "\nBrand: " << m_brand << "\nColor: " << m_color << endl;
+    }
+};
+class Printer {
+    string m_color;
+    string m_brand;
+    string m_type;
+public:
+    Printer(string color, string brand, string type) :m_color(color), m_brand(brand), m_type(type) {
+        cout << "Ctor" << endl;
+    }
+    ~Printer() {
+        cout << "Dtor" << endl;
+    }
+    Printer(const Printer& rhs) {
+        cout << "Copy ctor" << endl;
+        m_color = rhs.m_color;
+        m_brand = rhs.m_brand;
+        m_type = rhs.m_type;
+    }
+
+    Printer& operator=(const Printer& rhs) {
+        cout << "Copy assing" << endl;
+        if (this != &rhs) {
+            m_color = rhs.m_color;
+            m_brand = rhs.m_brand;
+            m_type = rhs.m_type;
+        }
+        return *this;
+    }
+};
+class Monitor {
+    string m_color;
+    string m_type;
+    string m_brand;
+public:
+    Monitor(string color, string type, string brand): m_color(color), m_type(type),m_brand(brand){
+        cout << "Ctor" << endl;
+    }
+    ~Monitor() {
+        cout << "Dtor" << endl;
+    }
+    Monitor(const Monitor& rhs) {
+        cout << "Copy ctor" << endl;
+        m_color = rhs.m_color;
+        m_type = rhs.m_type;
+        m_brand = rhs.m_brand;
+    }
+
+    Monitor& operator=(const Monitor& rhs) {
+        cout << "Copy assing" << endl;
+        if (this != &rhs) {
+            m_color = rhs.m_color;
+            m_type = rhs.m_type;
+            m_brand = rhs.m_brand;
+        }
+        return *this;
+    }
+};
+int main() {
+    {
+        cout << "Mouse" << endl;
+        Mouse p;
+        p.setButton(5);
+        p.setBrand("Ryzer");
+        p.setColor("Red");
+        p.print();
+        Mouse m = p;
+        m.print();
+        Mouse b;
+        b.setButton(12);
+        b.setBrand("MSI");
+        b.setColor("RGB");
+        p = b;
+        p.print();
+    }
+    cout << endl;
+    {
+        cout << "\nPrinter" << endl;
+        Printer p("Red", "Microsoft", "Office");
+        Printer m = p;
+        Printer b("White", "MSI", "Home");
+        p = b;
+    }
+    {
+        cout << "\nMonitor" << endl;
+        Monitor m("Black", "Office", "Redux");
+        Monitor p = m;
+        Monitor b("RGB", "Gamer", "ASUS");
+        m = b;
+    }
+	return 0;
+}

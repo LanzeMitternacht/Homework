@@ -1,0 +1,61 @@
+#include <iostream>
+#include<time.h>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+    const int row = 2, col = 5;
+    int a, mov;
+    int arr[row][col];
+    srand(time(0));
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            arr[i][j] = rand() % 20 + 1;
+        }
+    }
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+    while (true) {
+        cout << "Введите число сдвига: ";
+        cin >> mov;
+        for (int i = 0; i < row; i++)
+        {
+            for (int q = 0; q < mov; q++)
+            {
+                for (int j = col - 1; j > 0; j--)
+                {
+                    int temp = arr[i][j];
+                    arr[i][j] = arr[i][j - 1];
+                    arr[i][j - 1] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < row; i++)
+        {
+            for (int j = 0; j < col; j++)
+            {
+                cout << arr[i][j] << " ";
+            }
+            cout << endl;
+        }
+        cout << "Продолжить сдвиг разрядов?\n";
+        cout << "1 - Да\n";
+        cout << "2 - Нет\n";
+        cin >> a;
+        if (a == 2) {
+            return 0;
+        }
+    }
+    
+}

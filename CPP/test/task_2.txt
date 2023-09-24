@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a, b;
+	char c;
+	cout << "Введите длинну прямоугольника: ";
+	cin >> a;
+	cout << "Введите ширину прямоугольника: ";
+	cin >> b;
+	cout << "Введите символ для прямоугальника: ";
+	cin >> c;
+	for (int i = 1; i <= a; i++) {
+		for (int j = 1; j <= b; j++) {
+			if ((i == 1) || (j == 1) || (i == a) || (j == b)) {
+				cout << c;
+			}
+			else {
+				cout << " ";
+			}
+		}
+		cout << endl;
+	}
+	return 0;
+}

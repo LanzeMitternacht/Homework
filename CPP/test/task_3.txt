@@ -1,0 +1,131 @@
+#include <iostream>
+#include <time.h>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	srand (time(NULL));
+	int a, c, temp = 0, right = 0;
+	cout << "\tУровень сложности:\n";
+	cout << "=================================\n";
+	cout << "\t 1 - Легкий\n";
+	cout << "\t 2 - Средний\n";
+	cout << "\t 3 - Тяжелый\n";
+	cout << "\t 4 - Выход\n";
+	cout << "=================================\n";
+	cin >> c;
+	switch (c)
+	{
+	case 1:
+		for (int l  = 0; l <= 10; l++) {
+			for (int k = 0; k <= 10; k++) {
+				int i = rand() % 8 + 2;
+				int j = rand() % 8 + 2;
+				cout << "Чему равно: " << i << " * " << j << " = ";
+				cin >> a;
+				if (i * j != a) {
+					cout << "Вы ошиблись\n";
+					temp++;
+				}
+				else {
+					cout << "Вы угалали\n";
+					right++;
+				}
+				if (temp == 5) {
+					cout << "Вы не сдали\n";
+					return 0;
+				}
+				else if (right == 3) {
+					cout << "Вы сдали\n";
+					cout << "У вас " << temp << " ошибк(-ок/-а/-и))\n";
+					if (temp == 0) {
+						cout << "Ваша оценка 5";
+					}
+					if (temp == 1) {
+						cout << "Ваша оценка 4";
+					}
+					if (temp == 2) {
+						cout << "Ваша оценка 3";
+					}
+					return 0;
+				}
+			}
+		}
+	case 2:
+		for (int l = 0; l <= 10; l++) {
+			for (int k = 0; k <= 10; k++) {
+				int i = rand() % 8 + 2;
+				int j = rand() % 8 + 2;
+				cout << "Чему равно: " << i << " * " << j << " = ";
+				cin >> a;
+				if (i * j != a) {
+					cout << "Вы ошиблись\n";
+					temp++;
+				}
+				else {
+					cout << "Вы угалали\n";
+					right++;
+				}
+				if (temp == 3) {
+					cout << "Вы не сдали\n";
+					return 0;
+				}
+				else if (right == 5) {
+					cout << "Вы сдали\n";
+					cout << "У вас " << temp << " ошибк(-ок/-а/-и))\n";
+					if (temp == 0) {
+						cout << "Ваша оценка 5";
+					}
+					if (temp == 1) {
+						cout << "Ваша оценка 4";
+					}
+					if (temp == 2) {
+						cout << "Ваша оценка 3";
+					}
+					return 0;
+				}
+			}
+		}
+	case 3:
+		for (int l = 0; l <= 10; l++) {
+			for (int k = 0; k <= 10; k++) {
+				int i = rand() % 8 + 2;
+				int j = rand() % 8 + 2;
+				cout << "Чему равно: " << i << " * " << j << " = ";
+				cin >> a;
+				if (i * j != a) {
+					cout << "Вы ошиблись\n";
+					temp++;
+				}
+				else {
+					cout << "Вы угалали\n";
+					right++;
+				}
+				if (temp == 3) {
+					cout << "Вы не сдали\n";
+					return 0;
+				}
+				else if (right == 10) {
+					cout << "Вы сдали\n";
+					cout << "У вас " << temp << " ошибк(-ок/-а/-и))\n";
+					if (temp == 0) {
+						cout << "Ваша оценка 5";
+					}
+					if (temp == 1) {
+						cout << "Ваша оценка 4";
+					}
+					if (temp == 2) {
+						cout << "Ваша оценка 3";
+					}
+					return 0;
+				}
+			}
+		}
+	default:
+		cout << "Вы вышли из системы\n";
+		break;
+	}
+	return 0;
+}

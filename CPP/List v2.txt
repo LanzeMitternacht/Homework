@@ -1,0 +1,244 @@
+#include <iostream>
+#include <exception>
+
+using namespace std;
+
+template<typename T>
+struct List {
+    struct Node {
+        T m_value;
+        Node* m_next;
+        Node(T value, Node* next = nullptr) : m_value(value), m_next(next) {}
+    };
+    Node* head;
+
+    List() : head(nullptr) {}
+    List(const List& rhs) : head(nullptr) {
+        Node* node = rhs.head;
+        while (node != nullptr) {
+            push_back(node->m_value);
+            node = node->m_next;
+        }
+    }
+    List& operator=(const List& rhs) {
+        if (this != &rhs) {
+            clear();
+            Node* node = rhs.head;
+            while (node != nullptr) {
+                push_back(node->m_value);
+                node = node->m_next;
+            }
+        }
+        return *this;
+    }
+    ~List() {
+        clear();
+    }
+
+
+    void push_front(T value) noexcept {
+        if (!head) {
+            head = new Node(value);
+        }
+        else {
+            Node* node = head;
+            head = new Node(value, node);
+        }
+    }
+
+    void push_back(T value) noexcept {
+        if (!head) {
+            head = new Node(value);
+        }
+        else {
+            Node* node = head;
+            while (node->m_next) {
+                node = node->m_next;
+            }
+            node->m_next = new Node(value);
+        }
+    }
+
+    void pop_front() noexcept {
+        if (head != nullptr) {
+            Node* node = head;
+            head = head->m_next;
+            delete node;
+        }
+    }
+
+    void pop_back() {
+        if (!head) {
+            throw out_of_range("List is empty");
+        }
+        else {
+            Node* node = head;
+            while (node->m_next && node->m_next->m_next) {
+                node = node->m_next;
+            }
+            delete node->m_next;
+            node->m_next = nullptr;
+        }
+    }
+
+    bool empty() noexcept {
+        return head == nullptr;
+    }
+
+    T& at(int index) {
+        if (empty() || index > size()) {
+            throw out_of_range("Index out of range");
+        }
+        Node* node = head;
+        for (int i = 0; i < index; ++i) {
+            node = node->m_next;
+        }
+        return node->m_value;
+    }
+
+    void clear() noexcept {
+        while (head) {
+            Node* node = head;
+            head = head->m_next;
+            delete node;
+        }
+    }
+
+    int size() noexcept {
+        int size = 0;
+        Node* node = head;
+        while (node) {
+            node = node->m_next;
+            ++size;
+        }
+        return size;
+    }
+
+    void insert(int index, T value) {
+        if (index < 0 || index > size()) {
+            throw out_of_range("Index out of range");
+        }
+        if (index == 0) {
+            push_front(value);
+        }
+        else if (index == size()) {
+            push_back(value);
+        }
+        else {
+            Node* node = head;
+            for (int i = 0; i < index - 1; ++i) {
+                node = node->m_next;
+            }
+            node->m_next = new Node(value, node->m_next);
+        }
+    }
+
+    void remove(int index) {
+        if (index < 0 || index > size()) {
+            throw out_of_range("Index out of range");
+        }
+        if (index == 0) {
+            pop_front();
+        }
+        else if (index == size() - 1) {
+            pop_back();
+        }
+        else {
+            Node* node = head;
+            for (int i = 0; i < index - 1; ++i) {
+                node = node->m_next;
+            }
+            Node* temp = node->m_next;
+            node->m_next = temp->m_next;
+            delete temp;
+        }
+    }
+};
+
+int questionNumber() {
+    int number;
+    cout << "Print your number: ";
+    cin >> number;
+    return number;
+}
+
+int questionIndex() {
+    int index;
+    cout << "Print your index: ";
+    cin >> index;
+    return index;
+}
+
+int quesiontContinue() {
+    int result;
+    cout << "Do you want to continue working or show the result?\n";
+    cout << "0. Result\n" << "1. Continue\n";
+    cin >> result;
+    return result;
+}
+
+template<typename T>
+void menu(List<T>& l) {
+    int num;
+    cout << "\tWhat you want?\n";
+    cout << "1. Add number front\n";
+    cout << "2. Add number back\n";
+    cout << "3. Delete number front\n";
+    cout << "4. Delete number back\n";
+    cout << "5. Add number of index\n";
+    cout << "6. Delete number of index\n";
+    cout << "7. Exit\n";
+    cin >> num;
+    if (num < 0 || num > 7) {
+        throw out_of_range("Index out of range");
+    }
+    switch (num)
+    {
+    case 1:
+        l.push_front(questionNumber());
+            break;
+    case 2:
+        l.push_back(questionNumber());
+        break;
+    case 3:
+        l.pop_front();
+        break;
+    case 4: 
+        l.pop_back();
+        break;
+    case 5:
+        l.insert(questionIndex(), questionNumber());
+        break;
+    case 6:
+        l.remove(questionIndex());
+        break;
+    default:
+        cout << "Good bye\n";
+        break;
+    }
+}
+
+template<typename T>
+void showList(List<T> l) {
+    for (int i = 0; i < l.size(); i++) {
+        cout << l.at(i) << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    try {
+        srand(time(NULL));
+        List<int> l;
+        do {
+            menu(l);
+        } while (quesiontContinue());
+        cout << "Size list: " << l.size() << endl;
+        showList(l);
+       
+    }
+    catch (out_of_range oor) {
+        cout << "Exception: " << oor.what() << endl;
+    }
+    return 0;
+}

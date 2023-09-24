@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	int a;
+	cout << "Введите число а, не больше 500: ";
+	cin >> a;
+	while (a > 500) {
+		cout << "Введено некоректное число\n";
+		cout << "Повторите ввод числа а, не больше 500: ";
+		cin >> a;
+	}
+	for (int i = a; i <= 500; i++) {
+		i = i * (i+1) / 2;
+		cout << "Сумма чисел от " << a << " до 500 = " << i;
+	}
+	cout << endl;
+	return 0;
+}

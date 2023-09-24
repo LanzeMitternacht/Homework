@@ -1,0 +1,173 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+template <typename T>
+class vec {
+    T* m_ptr;
+    size_t m_count;
+    size_t m_capacity;
+
+    void reallocate(int number) {
+        if (!number) {
+            return;
+        }
+        m_capacity = number;
+        T* temp = new T[m_capacity];
+        m_count = min<size_t>(m_count, m_capacity);
+        copy(m_ptr, m_ptr + m_count, temp);
+
+        delete[] m_ptr;
+        m_ptr = temp;
+    }
+
+public:
+
+    vec() : m_ptr(nullptr), m_count(0), m_capacity(0) { }
+
+    ~vec() {
+        delete[] m_ptr;
+    }
+
+    vec(const vec& rhs) : m_ptr(new T[rhs.m_capacity]), m_count(rhs.m_count), m_capacity(rhs.m_capacity) {
+        for (int i = 0; i < rhs.m_count; ++i) {
+            m_ptr[i] = rhs.m_ptr[i];
+        }
+    }
+
+    vec& operator=(const vec& rhs) {
+        if (this != &rhs) {
+            delete[] m_ptr;
+            m_ptr = new T[rhs.m_capacity];
+            m_count = rhs.m_count;
+            m_capacity = rhs.m_capacity;
+            for (int i = 0; i < rhs.m_count; ++i) {
+                m_ptr[i] = rhs.m_ptr[i];
+            }
+        }
+        return *this;
+    }
+
+    T& operator[](int index)& {
+        if (index < 0 || index >= m_count) {
+            exit(1);
+        }
+        return m_ptr[index];
+    }
+
+    void push_back(const T& value) {
+        if (m_count == m_capacity) {
+            reallocate(max<size_t>(m_capacity, 1) * 2);
+        }
+        m_ptr[m_count] = value;
+        m_count++;
+    }
+
+    void push_front(const T& value) {
+        if (m_count == m_capacity) {
+            reallocate(max<size_t>(m_capacity, 1) * 2);
+        }
+        for (int i = m_count - 1; i >= 0; --i) {
+            m_ptr[i + 1] = m_ptr[i];
+        }
+        m_ptr[0] = value;
+        m_count++;
+    }
+
+    void pop_front() {
+        if (empty()) {
+            exit(1);
+        }
+        for (int i = 1; i < m_count; ++i) {
+            m_ptr[i - 1] = m_ptr[i];
+        }
+        m_count--;
+    }
+
+    void pop_back() {
+        if (empty()) {
+            exit(1);
+        }
+        m_count--;
+    }
+
+    void remove(int index) {
+        if (index < 0 && index > size()) {
+            exit(1);
+        }
+        for (int i = index; i < size() - 1; i++) {
+            m_ptr[i] = m_ptr[i + 1];
+        }
+        m_count--;
+    }
+
+    void remove(int index, int ssize) {
+        if (index < 0 && index > size()) {
+            exit(1);
+        }
+        for (int i = index; i < size() - ssize; i++) {
+            m_ptr[i] = m_ptr[i + ssize];
+        }
+        m_count -= ssize;
+    }
+
+    const T& operator[](int index) const& {
+        if (index < 0 || index >= m_count) {
+            exit(1);
+        }
+        return m_ptr[index];
+    }
+
+    bool empty() const {
+        return m_count == 0;
+    }
+
+    size_t size() const {
+        return m_count;
+    }
+
+    size_t allocated() const {
+        return m_capacity;
+    }
+
+    void clear() {
+        m_count = 0;
+    }
+
+    void insert(int index, const T* arr, int size) {
+        if (index < 0 || index > m_count) {
+            exit(1);
+        }
+        if (m_count + size >= m_capacity) {
+            reallocate(max<size_t>(size, max<size_t>(m_capacity, 1) * 2));
+        }
+        copy(m_ptr + index, m_ptr + index + m_count - 1, m_ptr + index + size);
+        copy(arr, arr + size, m_ptr + index);
+        m_count += size;
+    }
+    void insert(int index, const T& value) {
+        insert(index, &value, 1);
+    }
+};
+
+
+int main() {
+    vec<int> v;
+    for (int i = 0; i < 20; i++) {
+        v.push_back(i);
+    }
+    cout << v.empty() << endl;
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << " ";
+    }
+    cout << endl;
+    v.pop_front();
+    v.remove(5);
+    v.insert(6, 123);
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}

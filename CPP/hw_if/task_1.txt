@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    int usernumber, a1, a2, a3, a4, a5, a6, sum, sum1, temp1;
+    cout << "Введите шестизначное число\n";
+    cin >> usernumber;
+    if (usernumber / 100000 < 1){
+        cout << "Введено не шестизначное число\n";
+    }
+    else if (usernumber / 100000 > 9) {
+        cout << "Введено не шестизначное число\n";
+    }
+    else {
+        cout << "Введено шестизначное число\n";
+        a6 = usernumber % 10;
+        temp1 = usernumber / 10;
+        a5 = temp1 % 10;
+        temp1 = temp1 / 10;
+        a4 = temp1 % 10;
+        temp1 = temp1 / 10;
+        a3 = temp1 % 10;
+        temp1 = temp1 / 10;
+        a2 = temp1 % 10;
+        a1 = temp1 / 10;
+        cout << a1 << " * 10^5 + " << a2 << " *10^4 + " << a3 << " *10^3 + " << a4;
+        cout << " * 10^2 + " << a5 << " * 10^1 + " << a6 << " * 10^0\n";
+        sum = a1 + a2 + a3;
+        sum1 = a4 + a5 + a6;
+        if (sum == sum1) {
+            cout << " \nУ тебя счастливое число\n";
+        }
+        else {
+            cout << "\nУ тебя не счастливое число\n\n";
+        }
+    }
+    return 0;
+}
