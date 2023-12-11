@@ -1,0 +1,10 @@
+D:\VS Studio\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\VS Studio\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\VS Studio\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Clicker.resources
+D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
