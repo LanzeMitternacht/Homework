@@ -1,0 +1,12 @@
+D:\VS Studio\WindowsFormsApp2\bin\Release\TextEditor.exe.config
+D:\VS Studio\WindowsFormsApp2\bin\Release\TextEditor.exe
+D:\VS Studio\WindowsFormsApp2\bin\Release\TextEditor.pdb
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.csproj.AssemblyReference.cache
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.TextEditorMain.resources
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.OwnColor.resources
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.OwnFont.resources
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.Properties.Resources.resources
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.csproj.GenerateResource.cache
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.csproj.CoreCompileInputs.cache
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.exe
+D:\VS Studio\WindowsFormsApp2\obj\Release\TextEditor.pdb
