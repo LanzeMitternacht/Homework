@@ -1,0 +1,10 @@
+D:\VS Studio\Explorer\bin\Debug\Explorer.exe.config
+D:\VS Studio\Explorer\bin\Debug\Explorer.exe
+D:\VS Studio\Explorer\bin\Debug\Explorer.pdb
+D:\VS Studio\Explorer\obj\Debug\Explorer.csproj.AssemblyReference.cache
+D:\VS Studio\Explorer\obj\Debug\Explorer.Form1.resources
+D:\VS Studio\Explorer\obj\Debug\Explorer.Properties.Resources.resources
+D:\VS Studio\Explorer\obj\Debug\Explorer.csproj.GenerateResource.cache
+D:\VS Studio\Explorer\obj\Debug\Explorer.csproj.CoreCompileInputs.cache
+D:\VS Studio\Explorer\obj\Debug\Explorer.exe
+D:\VS Studio\Explorer\obj\Debug\Explorer.pdb
