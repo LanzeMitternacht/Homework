@@ -1,0 +1,35 @@
+.card{
+    padding: 10px 15px;
+    border: solid 2px #333;
+    border-radius: 5px;
+    background-color: rgb(190, 207, 240);
+}
+.row{
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+}
+.wrap-text{
+    white-space: pre-wrap;
+}
+
+.text-code{
+    background-color: rgb(231,231,231); 
+    color: #a16b05;
+    padding: 2px;
+}
+
+code{
+    background-color: rgb(231,231,231); 
+    color: #a16b05;
+    display: block;
+    padding: 2px 2px;
+    white-space: pre-wrap;
+}
+
+.tags{
+    background-color: #03899C;
+    padding: 5px;
+    color: black;
+}
+
