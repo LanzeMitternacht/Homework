@@ -1,0 +1,85 @@
+.ol-back{
+    padding: 2em;
+    background-color:#CD5C5C;
+    color: white;
+}
+
+.li-back{
+    padding: 15px;
+    background-color:#A52A2A;
+    margin: 13px auto;
+    list-style-position: inside;
+}
+
+.text-back{
+    font-size: large;
+    background-color: #800000;
+    margin: 10px;
+    padding: 15px;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+.todolist {
+    list-style: none;
+    padding: 0;
+}
+
+.todolist li {
+    padding: 10px 30px;
+    list-style-image: url("./icons/unchecked_16.png");
+    list-style-position: inside;
+}
+
+.todolist li:nth-child(odd) {
+    background-color: #32a899;
+}
+
+.todolist li:nth-child(even) {
+    background-color: #64D3C4;
+}
+
+.todolist li.done {
+    background-color: bisque;
+    list-style-image: url("./icons/checked_16.png");
+}
+
+.done span {
+    text-decoration: line-through;
+}
+
+.todolist li button {
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-size: .9em;
+    padding: 0 5px;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+
+.text-style{
+    white-space: pre-line;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text-step{
+    margin-left: 4em;
+}
+.speech{
+    font-style: italic;
+}
+
+.comment{
+    color: gray;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.synonyms{
+    color: blue;
+}
+
+
