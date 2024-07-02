@@ -1,0 +1,123 @@
+﻿<Window x:Class="KeyboardTrainer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Клавиатурный тренажер" Height="450" Width="800" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" LastChildFill="True">
+            <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                <TextBlock Text="Скорость: 0 сим/мин" Name="Speed" Margin="10"/>
+                <TextBlock Text="Ошибки: 0" Name="Fails" Margin="10" Width="71"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <TextBlock Text="Сложность: 0" Margin="10" VerticalAlignment="Center"/>
+                    <Slider Minimum="0" Maximum="5" Value="0" Width="100" Name="DifficultySlider" Margin="10"/>
+                    <CheckBox Content="Учитывать регистр" Name="CheckBoxRegister" Margin="10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Width="327">
+                    <Button Content="Начать" Click="StartSession_Click" Margin="10" Width="119"/>
+                    <Button Content="Стоп" Click="StopSession_Click" Margin="10" Width="142"/>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Stretch">
+            <TextBlock Text="" Name="RandomString" Margin="10"/>
+            <TextBox Name="UserInput" Margin="10" TextChanged="UserInput_TextChanged"/>
+        </StackPanel>
+        <Grid Grid.Row="1" Name="KeyboardGrid" Margin="10,78,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="70"/>
+            </Grid.ColumnDefinitions>
+        <Button Content="`" Background="Red" Grid.Row="0" Grid.Column="0"/>
+        <Button Content="1" Background="Red" Grid.Row="0" Grid.Column="1"/>
+        <Button Content="2" Background="Red" Grid.Row="0" Grid.Column="2"/>
+        <Button Content="3" Background="Yellow" Grid.Row="0" Grid.Column="3"/>
+        <Button Content="4" Background="Green" Grid.Row="0" Grid.Column="4"/>
+        <Button Content="5" Background="LightSkyBlue" Grid.Row="0" Grid.Column="5"/>
+        <Button Content="6" Background="LightSkyBlue" Grid.Row="0" Grid.Column="6"/>
+        <Button Content="7" Background="Violet" Grid.Row="0" Grid.Column="7"/>
+        <Button Content="8" Background="Violet" Grid.Row="0" Grid.Column="8"/>
+        <Button Content="9" Background="Red" Grid.Row="0" Grid.Column="9"/>
+        <Button Content="0" Background="Yellow" Grid.Row="0" Grid.Column="10"/>
+        <Button Content="-" Background="Green" Grid.Row="0" Grid.Column="11"/>
+        <Button Content="=" Background="Green" Grid.Row="0" Grid.Column="12"/>
+        <Button Content="Backspace" Background="Gray" Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="2"/>
+
+        <Button Content="Tab" Background="Gray" Grid.Row="1" Grid.Column="0"/>
+        <Button Content="Q" Background="Red" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="W" Background="Yellow" Grid.Row="1" Grid.Column="2"/>
+        <Button Content="E" Background="Green" Grid.Row="1" Grid.Column="3"/>
+        <Button Content="R" Background="LightSkyBlue" Grid.Row="1" Grid.Column="4"/>
+        <Button Content="T" Background="LightSkyBlue" Grid.Row="1" Grid.Column="5"/>
+        <Button Content="Y" Background="Violet" Grid.Row="1" Grid.Column="6"/>
+        <Button Content="U" Background="Violet" Grid.Row="1" Grid.Column="7"/>
+        <Button Content="I" Background="Red" Grid.Row="1" Grid.Column="8"/>
+        <Button Content="O" Background="Yellow" Grid.Row="1" Grid.Column="9"/>
+        <Button Content="P" Background="Green" Grid.Row="1" Grid.Column="10"/>
+        <Button Content="[" Background="Green" Grid.Row="1" Grid.Column="11"/>
+        <Button Content="]" Background="Green" Grid.Row="1" Grid.Column="12"/>
+        <Button Content="\" Background="Green" Grid.Row="1" Grid.Column="13" Grid.ColumnSpan="2"/>
+
+        <Button Content="Caps Lock" Background="Gray" Grid.Row="2" Grid.Column="0"/>
+        <Button Content="A" Background="Red" Grid.Row="2" Grid.Column="1"/>
+        <Button Content="S" Background="Yellow" Grid.Row="2" Grid.Column="2"/>
+        <Button Content="D" Background="Green" Grid.Row="2" Grid.Column="3"/>
+        <Button Content="F" Background="LightSkyBlue" Grid.Row="2" Grid.Column="4"/>
+        <Button Content="G" Background="LightSkyBlue" Grid.Row="2" Grid.Column="5"/>
+        <Button Content="H" Background="Violet" Grid.Row="2" Grid.Column="6"/>
+        <Button Content="J" Background="Violet" Grid.Row="2" Grid.Column="7"/>
+        <Button Content="K" Background="Red" Grid.Row="2" Grid.Column="8"/>
+        <Button Content="L" Background="Yellow" Grid.Row="2" Grid.Column="9"/>
+        <Button Content=";" Background="Green" Grid.Row="2" Grid.Column="10"/>
+        <Button Content="'" Background="Green" Grid.Row="2" Grid.Column="11"/>
+        <Button Content="Enter" Background="Gray" Grid.Row="2" Grid.Column="12" Grid.ColumnSpan="3"/>
+
+        <Button Content="Shift" Background="Gray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Button Content="Z" Background="Red" Grid.Row="3" Grid.Column="2"/>
+        <Button Content="X" Background="Yellow" Grid.Row="3" Grid.Column="3"/>
+        <Button Content="C" Background="Green" Grid.Row="3" Grid.Column="4"/>
+        <Button Content="V" Background="LightSkyBlue" Grid.Row="3" Grid.Column="5"/>
+        <Button Content="B" Background="LightSkyBlue" Grid.Row="3" Grid.Column="6"/>
+        <Button Content="N" Background="Violet" Grid.Row="3" Grid.Column="7"/>
+        <Button Content="M" Background="Violet" Grid.Row="3" Grid.Column="8"/>
+        <Button Content="," Background="Red" Grid.Row="3" Grid.Column="9"/>
+        <Button Content="." Background="Yellow" Grid.Row="3" Grid.Column="10"/>
+        <Button Content="/" Background="Green" Grid.Row="3" Grid.Column="11"/>
+        <Button Content="Shift" Background="Gray" Grid.Row="3" Grid.Column="12" Grid.ColumnSpan="3"/>
+
+        <Button Content="Ctrl" Background="Gray" Grid.Row="4" Grid.Column="0"/>
+        <Button Content="Win" Background="Gray" Grid.Row="4" Grid.Column="1"/>
+        <Button Content="Alt" Background="Gray" Grid.Row="4" Grid.Column="2"/>
+        <Button Content="Space" Background="Brown" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="7"/>
+        <Button Content="Alt" Background="Gray" Grid.Row="4" Grid.Column="10"/>
+        <Button Content="Win" Background="Gray" Grid.Row="4" Grid.Column="11"/>
+        <Button Content="Menu" Background="Gray" Grid.Row="4" Grid.Column="12"/>
+        <Button Content="Ctrl" Background="Gray" Grid.Row="4" Grid.Column="13"/>
+    </Grid>
+    </Grid>
+</Window>

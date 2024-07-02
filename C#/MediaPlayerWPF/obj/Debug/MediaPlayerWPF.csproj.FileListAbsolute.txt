@@ -1,0 +1,14 @@
+D:\VS Studio\MediaPlayerWPF\bin\Debug\MediaPlayerWPF.exe.config
+D:\VS Studio\MediaPlayerWPF\bin\Debug\MediaPlayerWPF.exe
+D:\VS Studio\MediaPlayerWPF\bin\Debug\MediaPlayerWPF.pdb
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MediaPlayerWPF.csproj.AssemblyReference.cache
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MainWindow.baml
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MainWindow.g.cs
+D:\VS Studio\MediaPlayerWPF\obj\Debug\App.g.cs
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MediaPlayerWPF_MarkupCompile.cache
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MediaPlayerWPF.g.resources
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MediaPlayerWPF.Properties.Resources.resources
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MediaPlayerWPF.csproj.GenerateResource.cache
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MediaPlayerWPF.csproj.CoreCompileInputs.cache
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MediaPlayerWPF.exe
+D:\VS Studio\MediaPlayerWPF\obj\Debug\MediaPlayerWPF.pdb

@@ -1,0 +1,19 @@
+﻿<Window x:Class="MediaPlayerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Media Player" Height="350" Width="525">
+    <Grid>
+        <MediaElement Name="MediaElement" LoadedBehavior="Manual" UnloadedBehavior="Stop" />
+        <TextBlock x:Name="NowPlayingText" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+            <Slider Name="VolumeSlider" Minimum="0" Maximum="1" Value="0.5" ValueChanged="VolumeSlider_ValueChanged" Margin="0,0,0,10" />
+            <Slider Name="SeekSlider" Minimum="0" Maximum="100" ValueChanged="SeekSlider_ValueChanged" Margin="0,0,0,10" />
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Button Content="Play" Click="PlayButton_Click" Margin="0,0,10,0" />
+                <Button Content="Pause" Click="PauseButton_Click" Margin="0,0,10,0" />
+                <Button Content="Stop" Click="StopButton_Click" Margin="0,0,10,0" />
+                <Button Content="Open File" Click="OpenFileButton_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
