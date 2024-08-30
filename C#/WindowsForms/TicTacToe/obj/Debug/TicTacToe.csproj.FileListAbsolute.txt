@@ -1,0 +1,12 @@
+D:\VS Studio\TicTacToe\bin\Debug\TicTacToe.exe.config
+D:\VS Studio\TicTacToe\bin\Debug\TicTacToe.exe
+D:\VS Studio\TicTacToe\bin\Debug\TicTacToe.pdb
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.csproj.AssemblyReference.cache
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.Form1.resources
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.Properties.Resources.resources
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.csproj.GenerateResource.cache
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.exe
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.pdb
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.WinForm.resources
+D:\VS Studio\TicTacToe\obj\Debug\TicTacToe.LeaderTable.resources

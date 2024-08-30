@@ -16,3 +16,21 @@ D:\VS Studio\BooksPublish\obj\Debug\BooksPublish.csproj.CopyComplete
 D:\VS Studio\BooksPublish\obj\Debug\BooksPublish.exe
 D:\VS Studio\BooksPublish\obj\Debug\BooksPublish.pdb
 D:\VS Studio\BooksPublish\obj\Debug\BooksPublish.PublisherAddEdit.resources
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\bin\Debug\BooksPublish.exe.config
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\bin\Debug\BooksPublish.exe
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\bin\Debug\BooksPublish.pdb
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\bin\Debug\EntityFramework.dll
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\bin\Debug\EntityFramework.xml
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.csproj.AssemblyReference.cache
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.AuthorAddEdit.resources
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.BookAddEdit.resources
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.Form1.resources
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.Properties.Resources.resources
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.PublisherAddEdit.resources
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.csproj.GenerateResource.cache
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.csproj.CoreCompileInputs.cache
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.csproj.CopyComplete
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.exe
+C:\Users\lance\Desktop\Homework\C#\BooksPubliher\Code\obj\Debug\BooksPublish.pdb

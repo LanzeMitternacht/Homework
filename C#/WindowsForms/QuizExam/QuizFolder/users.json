@@ -1,0 +1,30 @@
+[
+  {
+    "Username": "Lanze",
+    "PasswordHash": "SIpFR+3QPdlC2wN/YIAIhHKyHYXgfIS9nkjlIG1hi9c=",
+    "Salt": "+JJNtzEpFn0rmVZW8x+WKA==",
+    "Birthday": "2024-01-17T04:20:21.7930218+03:00",
+    "IsAdmin": true
+  },
+  {
+    "Username": "Gerg",
+    "PasswordHash": "dx+kV3IXr2bm7Kah2NdC7AsJt4gRzLyQSaEUZoff6tI=",
+    "Salt": "8uplPzIcd+Jcn0FllfODBA==",
+    "Birthday": "2023-11-14T19:29:12",
+    "IsAdmin": true
+  },
+  {
+    "Username": "Mark",
+    "PasswordHash": "/ZJqcpAMTsRPaLSOm/VJwPirJDiIb2O9/TeEltkDE0Y=",
+    "Salt": "Oha8SjbtVjJagONWAYXOTg==",
+    "Birthday": "2024-03-24T16:08:32.6241333+03:00",
+    "IsAdmin": false
+  },
+  {
+    "Username": "Lanzel",
+    "PasswordHash": "SCp/WXB9p0Oz2m4n6RQeJSTsiGEvwE9+DiN3V2t+5Ds=",
+    "Salt": "4w+nlg2ipAUlDy1y/cYyEA==",
+    "Birthday": "2024-03-24T16:20:03.7330801+03:00",
+    "IsAdmin": false
+  }
+]

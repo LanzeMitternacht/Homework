@@ -1,0 +1,3 @@
+Lanze, 2
+Dark, 1
+lanze, 1

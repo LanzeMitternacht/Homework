@@ -9,3 +9,14 @@ D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource
 D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\VS Studio\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\bin\Debug\WindowsFormsApp1.exe
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\obj\Debug\WindowsFormsApp1.Questionnaire.resources
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\obj\Debug\WindowsFormsApp1.MainForm.resources
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\obj\Debug\WindowsFormsApp1.exe
+C:\Users\lance\Desktop\Homework\C#\WindowsForms\Questionnaire\obj\Debug\WindowsFormsApp1.pdb

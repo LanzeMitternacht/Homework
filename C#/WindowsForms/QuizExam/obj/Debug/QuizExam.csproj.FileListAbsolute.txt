@@ -1,0 +1,113 @@
+D:\VS Studio\QuizExam\bin\Debug\QuizExam.exe.config
+D:\VS Studio\QuizExam\bin\Debug\QuizExam.exe
+D:\VS Studio\QuizExam\bin\Debug\QuizExam.pdb
+D:\VS Studio\QuizExam\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\VS Studio\QuizExam\bin\Debug\Newtonsoft.Json.dll
+D:\VS Studio\QuizExam\bin\Debug\System.Buffers.dll
+D:\VS Studio\QuizExam\bin\Debug\System.Memory.dll
+D:\VS Studio\QuizExam\bin\Debug\System.Numerics.Vectors.dll
+D:\VS Studio\QuizExam\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\VS Studio\QuizExam\bin\Debug\System.Text.Encodings.Web.dll
+D:\VS Studio\QuizExam\bin\Debug\System.Text.Json.dll
+D:\VS Studio\QuizExam\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\VS Studio\QuizExam\bin\Debug\System.ValueTuple.dll
+D:\VS Studio\QuizExam\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\VS Studio\QuizExam\bin\Debug\Newtonsoft.Json.xml
+D:\VS Studio\QuizExam\bin\Debug\System.Buffers.xml
+D:\VS Studio\QuizExam\bin\Debug\System.Memory.xml
+D:\VS Studio\QuizExam\bin\Debug\System.Numerics.Vectors.xml
+D:\VS Studio\QuizExam\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\VS Studio\QuizExam\bin\Debug\System.Text.Encodings.Web.xml
+D:\VS Studio\QuizExam\bin\Debug\System.Text.Json.xml
+D:\VS Studio\QuizExam\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\VS Studio\QuizExam\bin\Debug\System.ValueTuple.xml
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.csproj.AssemblyReference.cache
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.Authorization.resources
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.Login.resources
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.PersonalAcc.resources
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.Properties.Resources.resources
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.Quiz.resources
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.Registration.resources
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.SelectionMenu.resources
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.csproj.GenerateResource.cache
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.csproj.CoreCompileInputs.cache
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.csproj.CopyComplete
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.exe
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.pdb
+D:\VS Studio\QuizExam\obj\Debug\QuizExam.AddQuestion.resources
+E:\QuizExam\bin\Debug\QuizExam.exe.config
+E:\QuizExam\bin\Debug\QuizExam.exe
+E:\QuizExam\bin\Debug\QuizExam.pdb
+E:\QuizExam\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+E:\QuizExam\bin\Debug\Newtonsoft.Json.dll
+E:\QuizExam\bin\Debug\System.Buffers.dll
+E:\QuizExam\bin\Debug\System.Memory.dll
+E:\QuizExam\bin\Debug\System.Numerics.Vectors.dll
+E:\QuizExam\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\QuizExam\bin\Debug\System.Text.Encodings.Web.dll
+E:\QuizExam\bin\Debug\System.Text.Json.dll
+E:\QuizExam\bin\Debug\System.Threading.Tasks.Extensions.dll
+E:\QuizExam\bin\Debug\System.ValueTuple.dll
+E:\QuizExam\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+E:\QuizExam\bin\Debug\Newtonsoft.Json.xml
+E:\QuizExam\bin\Debug\System.Buffers.xml
+E:\QuizExam\bin\Debug\System.Memory.xml
+E:\QuizExam\bin\Debug\System.Numerics.Vectors.xml
+E:\QuizExam\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\QuizExam\bin\Debug\System.Text.Encodings.Web.xml
+E:\QuizExam\bin\Debug\System.Text.Json.xml
+E:\QuizExam\bin\Debug\System.Threading.Tasks.Extensions.xml
+E:\QuizExam\bin\Debug\System.ValueTuple.xml
+E:\QuizExam\obj\Debug\QuizExam.csproj.AssemblyReference.cache
+E:\QuizExam\obj\Debug\QuizExam.AddQuestion.resources
+E:\QuizExam\obj\Debug\QuizExam.Authorization.resources
+E:\QuizExam\obj\Debug\QuizExam.Login.resources
+E:\QuizExam\obj\Debug\QuizExam.PersonalAcc.resources
+E:\QuizExam\obj\Debug\QuizExam.Properties.Resources.resources
+E:\QuizExam\obj\Debug\QuizExam.Quiz.resources
+E:\QuizExam\obj\Debug\QuizExam.Registration.resources
+E:\QuizExam\obj\Debug\QuizExam.SelectionMenu.resources
+E:\QuizExam\obj\Debug\QuizExam.csproj.GenerateResource.cache
+E:\QuizExam\obj\Debug\QuizExam.csproj.CoreCompileInputs.cache
+E:\QuizExam\obj\Debug\QuizExam.csproj.CopyComplete
+E:\QuizExam\obj\Debug\QuizExam.exe
+E:\QuizExam\obj\Debug\QuizExam.pdb
+E:\QuizExam\obj\Debug\QuizExam.csproj.SuggestedBindingRedirects.cache
+D:\QuizExam\bin\Debug\QuizExam.exe.config
+D:\QuizExam\bin\Debug\QuizExam.exe
+D:\QuizExam\bin\Debug\QuizExam.pdb
+D:\QuizExam\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\QuizExam\bin\Debug\Newtonsoft.Json.dll
+D:\QuizExam\bin\Debug\System.Buffers.dll
+D:\QuizExam\bin\Debug\System.Memory.dll
+D:\QuizExam\bin\Debug\System.Numerics.Vectors.dll
+D:\QuizExam\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\QuizExam\bin\Debug\System.Text.Encodings.Web.dll
+D:\QuizExam\bin\Debug\System.Text.Json.dll
+D:\QuizExam\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\QuizExam\bin\Debug\System.ValueTuple.dll
+D:\QuizExam\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\QuizExam\bin\Debug\Newtonsoft.Json.xml
+D:\QuizExam\bin\Debug\System.Buffers.xml
+D:\QuizExam\bin\Debug\System.Memory.xml
+D:\QuizExam\bin\Debug\System.Numerics.Vectors.xml
+D:\QuizExam\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\QuizExam\bin\Debug\System.Text.Encodings.Web.xml
+D:\QuizExam\bin\Debug\System.Text.Json.xml
+D:\QuizExam\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\QuizExam\bin\Debug\System.ValueTuple.xml
+D:\QuizExam\obj\Debug\QuizExam.csproj.AssemblyReference.cache
+D:\QuizExam\obj\Debug\QuizExam.csproj.SuggestedBindingRedirects.cache
+D:\QuizExam\obj\Debug\QuizExam.AddQuestion.resources
+D:\QuizExam\obj\Debug\QuizExam.Authorization.resources
+D:\QuizExam\obj\Debug\QuizExam.Login.resources
+D:\QuizExam\obj\Debug\QuizExam.PersonalAcc.resources
+D:\QuizExam\obj\Debug\QuizExam.Properties.Resources.resources
+D:\QuizExam\obj\Debug\QuizExam.Quiz.resources
+D:\QuizExam\obj\Debug\QuizExam.Registration.resources
+D:\QuizExam\obj\Debug\QuizExam.SelectionMenu.resources
+D:\QuizExam\obj\Debug\QuizExam.csproj.GenerateResource.cache
+D:\QuizExam\obj\Debug\QuizExam.csproj.CoreCompileInputs.cache
+D:\QuizExam\obj\Debug\QuizExam.csproj.CopyComplete
+D:\QuizExam\obj\Debug\QuizExam.exe
+D:\QuizExam\obj\Debug\QuizExam.pdb

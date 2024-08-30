@@ -1,0 +1,9 @@
+D:\VS Studio\Hook\obj\Debug\Hook.csproj.AssemblyReference.cache
+D:\VS Studio\Hook\obj\Debug\Hook.Properties.Resources.resources
+D:\VS Studio\Hook\obj\Debug\Hook.csproj.GenerateResource.cache
+D:\VS Studio\Hook\obj\Debug\Hook.csproj.CoreCompileInputs.cache
+D:\VS Studio\Hook\bin\Debug\Hook.exe.config
+D:\VS Studio\Hook\bin\Debug\Hook.exe
+D:\VS Studio\Hook\bin\Debug\Hook.pdb
+D:\VS Studio\Hook\obj\Debug\Hook.exe
+D:\VS Studio\Hook\obj\Debug\Hook.pdb

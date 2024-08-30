@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
                 var result = MessageBox.Show("Создать анкету?", "Подтверждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (result == DialogResult.OK)
                 {
-                    StreamWriter sw = new StreamWriter("D:\\VS Studio\\WindowsFormsApp1\\QuestFinal.txt");
+                    StreamWriter sw = new StreamWriter("QuestFinal.txt");
                     sw.WriteLine("Наименование должности: " + TBNameV.Text);
                     sw.WriteLine("\tЛичная информация");
                     sw.WriteLine("ФИО: " + TBFio.Text);
