@@ -21,7 +21,7 @@ private:
 
 public:
     Vec() : m_ptr(nullptr), m_count(0), m_capacity(0) {}
-    Vec(size_t initial_capacity) : m_ptr(new T[initial_capacity]), m_count(0), m_capacity(initial_capacity) {}
+  explicit Vec(size_t initial_capacity) : m_ptr(new T[initial_capacity]), m_count(0), m_capacity(initial_capacity) {}
     ~Vec() { delete[] m_ptr; }
 
     Vec(const Vec& rhs) : m_ptr(rhs.m_count ? new T[rhs.m_count] : nullptr), m_count(rhs.m_count), m_capacity(rhs.m_count) {
