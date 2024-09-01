@@ -2,8 +2,6 @@
 #include <stdexcept>
 #include <algorithm>
 
-using namespace std;
-
 template <typename T>
 class Vec {
 private:
@@ -12,20 +10,20 @@ private:
     size_t m_capacity;
 
     void reallocate() noexcept {
-        m_capacity = max<size_t>(1, m_capacity * 2);
+        m_capacity = std::max<size_t>(1, m_capacity * 2);
         T* tmp = new T[m_capacity];
-        copy(m_ptr, m_ptr + m_count, tmp);
+        std::copy(m_ptr, m_ptr + m_count, tmp);
         delete[] m_ptr;
         m_ptr = tmp;
     }
 
 public:
     Vec() : m_ptr(nullptr), m_count(0), m_capacity(0) {}
-  explicit Vec(size_t initial_capacity) : m_ptr(new T[initial_capacity]), m_count(0), m_capacity(initial_capacity) {}
+    Vec(size_t initial_capacity) : m_ptr(new T[initial_capacity]), m_count(0), m_capacity(initial_capacity) {}
     ~Vec() { delete[] m_ptr; }
 
     Vec(const Vec& rhs) : m_ptr(rhs.m_count ? new T[rhs.m_count] : nullptr), m_count(rhs.m_count), m_capacity(rhs.m_count) {
-        copy(rhs.m_ptr, rhs.m_ptr + rhs.m_count, m_ptr);
+        std::copy(rhs.m_ptr, rhs.m_ptr + rhs.m_count, m_ptr);
     }
 
     Vec& operator=(const Vec& rhs) {
@@ -35,16 +33,16 @@ public:
             m_count = rhs.m_count;
             m_capacity = rhs.m_capacity;
             if (m_ptr) {
-                copy(rhs.m_ptr, rhs.m_ptr + rhs.m_count, m_ptr);
+                std::copy(rhs.m_ptr, rhs.m_ptr + rhs.m_count, m_ptr);
             }
         }
         return *this;
     }
 
     Vec(Vec&& rhs) noexcept : Vec() {
-        swap(m_ptr, rhs.m_ptr);
-        swap(m_count, rhs.m_count);
-        swap(m_capacity, rhs.m_capacity);
+        std::swap(m_ptr, rhs.m_ptr);
+        std::swap(m_count, rhs.m_count);
+        std::swap(m_capacity, rhs.m_capacity);
     }
 
     Vec& operator=(Vec&& rhs) noexcept {
@@ -63,14 +61,14 @@ public:
 
     T& operator[](int index) {
         if (index < 0 || static_cast<size_t>(index) >= m_count) {
-            throw out_of_range("Index out of range");
+            throw std::out_of_range("Index out of range");
         }
         return m_ptr[index];
     }
 
     const T& operator[](int index) const {
         if (index < 0 || static_cast<size_t>(index) >= m_count) {
-            throw out_of_range("Index out of range");
+            throw std::out_of_range("Index out of range");
         }
         return m_ptr[index];
     }
@@ -125,7 +123,7 @@ public:
 
     void insert(size_t pos, const T& item) {
         if (pos > m_count) {
-            throw out_of_range("Index out of range");
+            throw std::out_of_range("Index out of range");
         }
         if (m_count == m_capacity) {
             reallocate();
@@ -153,24 +151,24 @@ public:
 
     void pop_back() {
         if (m_count == 0) {
-            throw runtime_error("Attempt to pop from an empty array");
+            throw std::runtime_error("Attempt to pop from an empty array");
         }
         m_count--;
     }
 
     void pop_front() {
         if (m_count == 0) {
-            throw runtime_error("Attempt to pop from an empty array");
+            throw std::runtime_error("Attempt to pop from an empty array");
         }
         for (size_t i = 0; i < m_count - 1; i++) {
-            m_ptr[i] = m_ptr[i + 1];
+            m_ptr[i] = std::move(m_ptr[i + 1]);
         }
         m_count--;
     }
 
     void remove(int index) {
         if (index < 0 || static_cast<size_t>(index) >= m_count) {
-            throw out_of_range("Index out of range");
+            throw std::out_of_range("Index out of range");
         }
         for (size_t i = index; i < m_count - 1; i++) {
             m_ptr[i] = m_ptr[i + 1];
@@ -182,28 +180,79 @@ public:
         size_t left = 0;
         size_t right = m_count - 1;
         while (left < right) {
-            swap(m_ptr[left], m_ptr[right]);
+            std::swap(m_ptr[left], m_ptr[right]);
             ++left;
             --right;
+        }
+    }
+
+    void print() const noexcept {
+        for (size_t i = 0; i < m_count; i++) {
+            std::cout << m_ptr[i] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    void fill(size_t begin, size_t end, const T& data) {
+        if (begin > end || end > m_capacity)
+            throw std::out_of_range("Invalid range for fill operation");
+        for (size_t i = begin; i < end; i++) {
+            m_ptr[i] = data;
         }
     }
 };
 
 int main() {
-    Vec<int> v;
-    v.push_back(5);
-    v.push_back(8);
+    Vec<int> vec(5);
 
-    for (size_t i = 0; i < v.size(); i++) {
-        cout << v[i] << " ";
-    }
-    cout << endl;
+    vec.push_back(1);
+    vec.push_back(2);
+    vec.push_back(3);
+    vec.push_front(0);
 
-    v.remove(0);
-    for (size_t i = 0; i < v.size(); i++) {
-        cout << v[i] << " ";
-    }
-    cout << endl;
+    std::cout << "After adding elements: ";
+    vec.print();
+
+    std::cout << "Element at index 2: " << vec[2] << std::endl;
+
+    vec += 10;
+    std::cout << "After adding 10 to all elements: ";
+    vec.print();
+
+    vec -= 5;
+    std::cout << "After subtracting 5 from all elements: ";
+    vec.print();
+
+    vec.insert(2, 99);
+    std::cout << "After inserting 99 at index 2: ";
+    vec.print();
+
+    vec.remove(2);
+    std::cout << "After removing element at index 2: ";
+    vec.print();
+
+    vec.reverse();
+    std::cout << "After reversing: ";
+    vec.print();
+
+    vec.fill(0, 3, 7);
+    std::cout << "After filling first three elements with 7: ";
+    vec.print();
+
+    vec.pop_back();
+    std::cout << "After removing last element: ";
+    vec.print();
+
+    vec.pop_front();
+    std::cout << "After removing first element: ";
+    vec.print();
+
+    std::cout << "Is vector empty? " << (vec.empty() ? "Yes" : "No") << std::endl;
+
+    vec.clear();
+    std::cout << "After clearing: ";
+    vec.print();
+    std::cout << "Is vector empty? " << (vec.empty() ? "Yes" : "No") << std::endl;
 
     return 0;
 }
